@@ -17,7 +17,7 @@ namespace GameShop
 
         protected void logowanie_Click(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=KAMIL-PC\SQLEXPRESS;Initial Catalog=s4SwietochowskiK;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kamil\source\repos\GameShop\GameShop\App_Data\MyDb.mdf;Integrated Security=True";
             SqlCommand cmd = new SqlCommand("select * from [Uzytkownicy] where Login=@login and Haslo=@haslo", con);
             cmd.Parameters.AddWithValue("@login", login.Text);
             cmd.Parameters.AddWithValue("@haslo", haslo.Text);

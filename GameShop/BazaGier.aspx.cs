@@ -39,7 +39,7 @@ namespace GameShop
 
             var ListaGier = (GridView)LoginView1.FindControl("ListaGier");
 
-            con.ConnectionString = @"Data Source=KAMIL-PC\SQLEXPRESS;Initial Catalog=s4SwietochowskiK;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kamil\source\repos\GameShop\GameShop\App_Data\MyDb.mdf;Integrated Security=True";
             SqlCommand cmd = new SqlCommand("select * from [Baza_gier]", con);
             SqlCommand cmd1 = new SqlCommand("select * from [Baza_gier]", con);
             con.Open();

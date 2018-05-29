@@ -49,7 +49,7 @@ namespace GameShop
 
             String login = Context.User.Identity.Name;
 
-            con.ConnectionString = @"Data Source=KAMIL-PC\SQLEXPRESS;Initial Catalog=s4SwietochowskiK;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kamil\source\repos\GameShop\GameShop\App_Data\MyDb.mdf;Integrated Security=True";
             SqlCommand SelectCommand= new SqlCommand("select imie_nazwisko from Uzytkownicy where Login=@sql", con);
             SelectCommand.Parameters.AddWithValue("@sql", login);
 

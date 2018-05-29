@@ -127,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\MyDb.mdf" />
     <Content Include="BazaGier.aspx" />
     <Content Include="CSS\GridViewStyle.css" />
     <Content Include="LogOut.aspx" />
@@ -262,9 +263,7 @@
       <DependentUpon>Zamowienia.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

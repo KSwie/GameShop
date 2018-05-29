@@ -26,7 +26,7 @@ namespace GameShop
             String login = Context.User.Identity.Name;
 
 
-            con.ConnectionString = @"Data Source=KAMIL-PC\SQLEXPRESS;Initial Catalog=s4SwietochowskiK;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kamil\source\repos\GameShop\GameShop\App_Data\MyDb.mdf;Integrated Security=True";
             SqlCommand cmd = new SqlCommand("select Zamowienia.ID, Zamowienia.Data, Baza_gier.Nazwa, Baza_gier.Platforma, Baza_gier.Cena_kupna from Zamowienia join Baza_gier on Zamowienia.ID_produktu=Baza_gier.ID join Uzytkownicy on Uzytkownicy.ID=Zamowienia.ID_uzytkownika where Login=@sql", con);
             cmd.Parameters.AddWithValue("@sql", login);
 

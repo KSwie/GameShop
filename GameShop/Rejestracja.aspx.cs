@@ -22,7 +22,7 @@ namespace GameShop
 
         protected void dalej_Click(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=KAMIL-PC\SQLEXPRESS;Initial Catalog=s4SwietochowskiK;Integrated Security=True";
+            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kamil\source\repos\GameShop\GameShop\App_Data\MyDb.mdf;Integrated Security=True";
             String imieNazwisko = imie.Text +" " +nazwisko.Text;
 
             SqlCommand cmd1 = new SqlCommand("select Login from Uzytkownicy where Login=@login1",con);
